@@ -4,6 +4,40 @@ import java.util.Scanner;
 
 public class Ex0115 {
 
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+        String[] words = str.split(" ");
+
+        System.out.print("奇数番目:");
+        for (int i = 0; i < words.length; i += 2) {
+            System.out.print(words[i] + " ");
+        }
+
+        System.out.println();
+
+        System.out.print("偶数番目:");
+        for (int i = 1; i < words.length; i += 2) {
+            System.out.print(words[i] + " ");
+        }
+
+        sc.close();
+    }
+}
+
+
+
+
+
+/*
+package ex0115;
+
+import java.util.Scanner;
+
+public class Ex0115 {
+
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 
@@ -45,3 +79,4 @@ public class Ex0115 {
 	}
 
 }
+*/

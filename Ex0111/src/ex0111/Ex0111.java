@@ -1,3 +1,42 @@
+package ex0111;
+
+import java.util.Scanner;
+
+public class Ex0111 {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("文字列：");
+        String str = sc.nextLine();
+
+        String ngChars = "①③⑤⑦⑨";
+
+        boolean found = false;
+
+        for (int i = 0; i < str.length(); i++) {
+
+            char c = str.charAt(i);
+
+            if (ngChars.indexOf(c) >= 0) {
+                System.out.println(
+                    "許可しない文字(文字：" + c + " " + (i + 1) + "桁目)が含まれます"
+                );
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("許可する文字列です");
+        }
+
+        sc.close();
+    }
+}
+
+
 /* package ex0111;
 
 import java.util.Scanner;
@@ -45,40 +84,3 @@ public class Ex0111 {
 }
 */
 
-package ex0111;
-
-import java.util.Scanner;
-
-public class Ex0111 {
-
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("文字列：");
-        String str = sc.nextLine();
-
-        String ngChars = "①③⑤⑦⑨";
-
-        boolean found = false;
-
-        for (int i = 0; i < str.length(); i++) {
-
-            char c = str.charAt(i);
-
-            if (ngChars.indexOf(c) >= 0) {
-                System.out.println(
-                    "許可しない文字(文字：" + c + " " + (i + 1) + "桁目)が含まれます"
-                );
-                found = true;
-                break;
-            }
-        }
-
-        if (!found) {
-            System.out.println("許可する文字列です");
-        }
-
-        sc.close();
-    }
-}
