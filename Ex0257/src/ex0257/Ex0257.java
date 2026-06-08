@@ -44,8 +44,8 @@ public class Ex0257 {
 		}
 
 		// 日数差を計算
-		int diff = Math.abs(totalDay1 - totalDay2);
-		long seconds = diff * 86400L;
+		int diff = Math.abs(totalDay1 - totalDay2); //どっちの日付が先でも日数差を正の数にする
+		long seconds = diff * 86400L; //日数差に86400を掛けて秒数へ変換
 
 		if (diff == 0) {
 			System.out.println("日数の差は 0 日です");
